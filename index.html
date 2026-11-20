@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Моя первая страница</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #12212b;
+      color: #e8f0f2;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 { color: #3fd1bb; }
+    ul {
+      display: inline-block;
+      text-align: left;
+      margin: 20px 0;
+    }
+    button {
+      background: #3fd1bb;
+      color: #12212b;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">Привет, я Акбархон!</h1>
+  <p id="text">Я учусь программировать.</p>
+
+  <p>Что я хочу освоить:</p>
+  <ul>
+    <li>HTML и CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <li>Node.js и базы данных</li>
+  </ul>
+
+  <br>
+  <button onclick="changeText()">Нажми меня</button>
+  <button onclick="changeColor()">Сменить цвет</button>
+
+  <script>
+    function changeText() {
+      document.getElementById("text").textContent = "Это моя первая кнопка, и она работает!";
+    }
+
+    function changeColor() {
+      var colors = ["#3fd1bb", "#f2b63a", "#ff6b6b", "#6bb5ff", "#b98aff"];
+      var random = colors[Math.floor(Math.random() * colors.length)];
+      document.getElementById("title").style.color = random;
+    }
+  </script>
+</body>
+</html>
