@@ -10,6 +10,7 @@
       color: #e8f0f2;
       text-align: center;
       padding: 60px 20px;
+      transition: background 0.4s;
     }
     h1 { color: #3fd1bb; }
     ul {
@@ -44,6 +45,7 @@
   <br>
   <button onclick="changeText()">Нажми меня</button>
   <button onclick="changeColor()">Сменить цвет</button>
+  <button onclick="changeBackground()">Не трогать</button>
 
   <script>
     function changeText() {
@@ -54,6 +56,12 @@
       var colors = ["#3fd1bb", "#f2b63a", "#ff6b6b", "#6bb5ff", "#b98aff"];
       var random = colors[Math.floor(Math.random() * colors.length)];
       document.getElementById("title").style.color = random;
+    }
+
+    function changeBackground() {
+      var backgrounds = ["#12212b", "#3b1f4a", "#4a1f2b", "#1f4a3b", "#1f2f5c", "#5c4a1f"];
+      var random = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+      document.body.style.background = random;
     }
   </script>
 </body>
