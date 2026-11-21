@@ -28,6 +28,10 @@
       cursor: pointer;
       margin: 5px;
     }
+    #counter {
+      font-size: 24px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
@@ -47,7 +51,11 @@
   <button onclick="changeColor()">Сменить цвет</button>
   <button onclick="changeBackground()">Не трогать</button>
 
+  <p id="counter">Нажатий: 0</p>
+
   <script>
+    var count = 0;
+
     function changeText() {
       document.getElementById("text").textContent = "Это моя первая кнопка, и она работает!";
     }
@@ -59,6 +67,9 @@
     }
 
     function changeBackground() {
+      count = count + 1;
+      document.getElementById("counter").textContent = "Нажатий: " + count;
+
       var backgrounds = ["#12212b", "#3b1f4a", "#4a1f2b", "#1f4a3b", "#1f2f5c", "#5c4a1f"];
       var random = backgrounds[Math.floor(Math.random() * backgrounds.length)];
       document.body.style.background = random;
